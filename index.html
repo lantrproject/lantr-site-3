@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lantr — connect local venues & artists</title>
+  <meta name="description" content="Lantr connects small venues and local artists. Discover, post, and fill live dates — starting in Sydney." />
+  <link rel="icon" href="/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: { DEFAULT: '#0c0f12', elevated: '#12161b', subtle: '#1a2027' },
+            text: { primary: '#e6eef6', secondary: '#b3c0cc', muted: '#8a98a6' },
+            accent: {
+              500: '#21adff'
+            },
+            limepulse: '#c0ff5a'
+          },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,0.35)' },
+          fontFamily: { display: ['Inter','system-ui','sans-serif'], body: ['Inter','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(8px); background: rgba(15,17,20,0.4); }
+    .ring-focus:focus { outline: none; box-shadow: 0 0 0 3px rgba(33,173,255,0.5); }
+  </style>
+</head>
+<body class="bg-bg text-text-primary font-body">
+  <header class="sticky top-0 z-40 bg-bg/70 glass border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-accent-500 to-limepulse shadow-soft"></div>
+        <span class="font-extrabold tracking-tight text-lg">lantr</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-text-secondary">
+        <a href="#how" class="hover:text-text-primary">How it works</a>
+        <a href="#signup" class="hover:text-text-primary">Join</a>
+        <a href="#faq" class="hover:text-text-primary">FAQ</a>
+      </nav>
+      <a href="#signup" class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-400 text-bg font-semibold px-4 py-2 rounded-xl ring-focus shadow-soft">Get early access</a>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 py-20 sm:py-28">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">Book local talent. <span class="text-accent-500">Fast.</span></h1>
+          <p class="mt-4 text-lg text-text-secondary">Lantr connects independent venues and local artists — starting in Sydney’s Inner West.</p>
+          <form class="mt-6 flex gap-3">
+            <input type="email" required placeholder="you@lantr.live" class="flex-1 px-4 py-3 rounded-xl bg-bg-elevated border border-white/10 placeholder:text-text-muted ring-focus" />
+            <button class="px-5 py-3 rounded-xl bg-accent-500 hover:bg-accent-400 font-semibold text-bg">Join</button>
+          </form>
+          <p class="mt-3 text-sm text-text-muted">We’ll contact you from lantrproject@gmail.com.</p>
+        </div>
+        <div class="bg-bg-elevated border border-white/5 rounded-2xl p-4 shadow-soft">
+          <p class="text-sm text-text-muted mb-2">Prototype listings</p>
+          <div class="space-y-3">
+            <div class="bg-bg-subtle border border-white/5 rounded-xl p-3">
+              <p class="text-xs text-text-muted">Feature venue</p>
+              <p class="font-semibold">The Back Room, Newtown</p>
+              <p class="text-text-secondary text-sm">120 cap · PA provided</p>
+            </div>
+            <div class="bg-bg-subtle border border-white/5 rounded-xl p-3">
+              <p class="text-xs text-text-muted">Open date</p>
+              <p class="font-semibold">Fri 7 Nov — Indie/Alt</p>
+              <p class="text-text-secondary text-sm">Door split · looking for 2 acts</p>
+            </div>
+            <div class="bg-bg-subtle border border-white/5 rounded-xl p-3">
+              <p class="text-xs text-text-muted">New listing</p>
+              <p class="font-semibold">Marrickville Bowlo</p>
+              <p class="text-text-secondary text-sm">200 cap · Backline on request</p>
+            </div>
+          </div>
+          <p class="mt-3 text-xs text-text-muted">Real data will show here later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl font-bold mb-8">How Lantr works</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-bg-elevated border border-white/5 rounded-2xl p-5">
+          <h3 class="text-accent-500 font-semibold">1 · Venues post</h3>
+          <p class="text-text-secondary mt-2">List open dates, style, capacity, deal.</p>
+        </div>
+        <div class="bg-bg-elevated border border-white/5 rounded-2xl p-5">
+          <h3 class="text-accent-500 font-semibold">2 · Artists apply</h3>
+          <p class="text-text-secondary mt-2">Acts send links and tech needs.</p>
+        </div>
+        <div class="bg-bg-elevated border border-white/5 rounded-2xl p-5">
+          <h3 class="text-accent-500 font-semibold">3 · Lock it in</h3>
+          <p class="text-text-secondary mt-2">Confirm lineup and promote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup" class="border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl font-bold mb-8">Join the Lantr beta</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <form class="bg-bg-elevated border border-white/5 rounded-2xl p-5 space-y-3">
+          <h3 class="text-lg font-semibold">I run a venue</h3>
+          <input placeholder="Venue name" class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus" />
+          <input placeholder="Suburb" class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus" />
+          <input type="number" placeholder="Capacity" class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus" />
+          <textarea placeholder="Deal terms" class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus"></textarea>
+          <button class="px-4 py-2 rounded-lg bg-accent-500 hover:bg-accent-400 text-bg font-semibold">Request access</button>
+        </form>
+        <form class="bg-bg-elevated border border-white/5 rounded-2xl p-5 space-y-3">
+          <h3 class="text-lg font-semibold">I’m an artist / band</h3>
+          <input placeholder="Artist/Band name" class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus" />
+          <input placeholder="Home suburb" class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus" />
+          <select class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus">
+            <option>Genre</option>
+            <option>Indie</option>
+            <option>Rock</option>
+            <option>Jazz</option>
+            <option>Electronic</option>
+          </select>
+          <input placeholder="Links (IG/Spotify)" class="px-3 py-2 rounded-lg bg-bg-subtle border border-white/10 ring-focus" />
+          <button class="px-4 py-2 rounded-lg bg-accent-500 hover:bg-accent-400 text-bg font-semibold">Request access</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="border-t border-white/5 bg-bg-elevated/60">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-2xl font-bold mb-6">FAQ</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <details class="bg-bg-elevated border border-white/5 rounded-2xl p-5" open>
+          <summary class="font-semibold cursor-pointer">Is Lantr free?</summary>
+          <p class="text-text-secondary mt-2">Yes, during beta.</p>
+        </details>
+        <details class="bg-bg-elevated border border-white/5 rounded-2xl p-5">
+          <summary class="font-semibold cursor-pointer">What cities?</summary>
+          <p class="text-text-secondary mt-2">Sydney Inner West first, expanding later.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-xl bg-gradient-to-br from-accent-500 to-limepulse"></div>
+        <span class="font-bold">lantr</span>
+      </div>
+      <p class="text-sm text-text-muted">© <span id="year"></span> Lantr — connecting local rooms with the right acts.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
